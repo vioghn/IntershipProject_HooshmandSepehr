@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Domain.Entites
 {
-    internal class User
+    public class User
     {
   
         public int UserId { get; set; }
@@ -17,7 +17,7 @@ namespace Purse.Domain.Entites
         public Company Company { get; set; }
 
         public int PurseId { get; set; }
-        public Purse Purse { get; set; }
+        public PurseM Purse { get; set; }
      
             
         

@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace Purse.Domain.Entites
 {
-    internal class Purse
+     public class PurseM
     {
         public int PurseId { get; set; }
         public float PurseBalance { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-
-
-
 
 
     }
