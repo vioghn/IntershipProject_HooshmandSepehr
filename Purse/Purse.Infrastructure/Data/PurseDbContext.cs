@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Purse.Domain.Entites;
+using Purse.Infrastructure.Data.Config;
 
 
 namespace Purse.Infrastructure.Data
@@ -24,10 +25,10 @@ namespace Purse.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) // to identify to db our configurations
         {
-            /* modelBuilder.ApplyConfiguration(new UserConfig());
+             modelBuilder.ApplyConfiguration(new UserConfig());
              modelBuilder.ApplyConfiguration(new PurseConfig());
              modelBuilder.ApplyConfiguration(new CompanyConfig());
-             modelBuilder.ApplyConfiguration(new TransactionConfig());*/
+             modelBuilder.ApplyConfiguration(new TransactionConfig());
 
 
 

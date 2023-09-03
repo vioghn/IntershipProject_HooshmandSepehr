@@ -19,7 +19,12 @@ namespace Purse.Domain.Entites
         }
         public int TransactionID { get; set; }
         public  Kind TransactionKind  { get; set; }
-        public int PurseId;
+
+        public DateTime TransactionTime { get; set; }
+        public int PurseId { get; set; }
+        public PurseM Purse { get; set; }
+        
+
 
 
     }
