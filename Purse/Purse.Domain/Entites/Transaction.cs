@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Purse.Domain.Entites
 {
 
-    public class Transaction
+    internal class Transaction
     {
         public enum Kind
         {
@@ -19,7 +19,10 @@ namespace Purse.Domain.Entites
         }
         public int TransactionID { get; set; }
         public  Kind TransactionKind  { get; set; }
-        public int PurseId;
+        public int PurseId { get; set; }
+        public Purse Purse { get; set; }
+        
+
 
 
     }

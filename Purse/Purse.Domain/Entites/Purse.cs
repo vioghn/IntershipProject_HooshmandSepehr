@@ -10,7 +10,9 @@ namespace Purse.Domain.Entites
     {
         public int PurseId { get; set; }
         public float PurseBalance { get; set; }
-        public int UserID { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
+
 
 
 
