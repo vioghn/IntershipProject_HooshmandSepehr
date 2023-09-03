@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Domain.Entites
 {
-    internal class Company
+    public class Company
     {
         [Key] 
         public int CompanyId { get; set; }
