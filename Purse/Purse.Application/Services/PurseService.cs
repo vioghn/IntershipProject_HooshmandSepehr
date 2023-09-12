@@ -130,5 +130,45 @@ namespace Purse.Application.Services
 
             return purse.PurseBalance;
         }
+        public string CreatePurse(PurseM purse , int UserId)
+        {
+            var User = _dbContext.Users.FirstOrDefault(u => u.UserId == UserId);
+            if (User == null)
+                return "userId not found";
+
+            purse.User = User;
+            purse.UserId = UserId;
+
+
+            _dbContext.Purses.Add(purse);
+            _dbContext.SaveChanges();
+            return "Purse was added";
+        }
+        public string CreateUser(User user, int CompanyId)
+        {
+            var Company = _dbContext.Companies.FirstOrDefault(u => u.CompanyId== CompanyId);
+            if (Company == null)
+                return "CompanyId not found";
+
+            user.Company = Company;
+            user.CompanyID= CompanyId;
+
+            _dbContext.Users.Add(user);
+            _dbContext.SaveChanges();
+            return "User was added";
+        }
+        public string CreateCompany(Company Company)
+        {
+
+            _dbContext.Companies.Add(Company);
+            _dbContext.SaveChanges();
+            return "Company was added";
+        }
+        public string UpdateUser(User user)
+        {
+            _dbContext.Users.Update(user);
+            _dbContext.SaveChanges();
+            return "user was updated";
+        }
     }
 }

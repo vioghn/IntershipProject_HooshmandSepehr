@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Purse.Domain\Purse.Domain.csproj" />
+    <ProjectReference Include="..\Purse.Infrastructure\Purse.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

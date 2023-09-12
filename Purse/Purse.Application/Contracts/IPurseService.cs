@@ -10,5 +10,12 @@ namespace Purse.Application.Contracts
         string Move(int sourcePurseId, int destinationPurseId, float amount);
         List<PurseM> GetPurses();
         float GetBalance(int purseId);
+        string UpdateUser(User user);
+        string CreateCompany(Company Company);
+        string CreateUser(User user, int CompanyId);
+        string CreatePurse(PurseM purse, int UserId);
+
+
+
     }
 }
