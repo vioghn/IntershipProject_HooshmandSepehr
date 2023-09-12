@@ -3,17 +3,17 @@ using Purse.Domain.Entites;
 
 namespace Purse.Application.Contracts
 {
-    internal interface IPurseService
+    public interface IPurseService
     {
         string Deposit(int purseId, float amount);
         string Withdraw(int purseId, float amount);
         string Move(int sourcePurseId, int destinationPurseId, float amount);
-        List<PurseM> GetPurses();
-        float GetBalance(int purseId);
-        string UpdateUser(User user);
-        string CreateCompany(Company Company);
-        string CreateUser(User user, int CompanyId);
-        string CreatePurse(PurseM purse, int UserId);
+        List<PurseM> GetPurses(); //Done
+        float GetBalance(int purseId); //Done
+        string UpdateUser(User user); //Done
+        string CreateCompany(Company Company); //Done
+        string CreateUser(User user, int CompanyId); //Done
+        string CreatePurse(PurseM purse, int UserId); //Done
 
 
 

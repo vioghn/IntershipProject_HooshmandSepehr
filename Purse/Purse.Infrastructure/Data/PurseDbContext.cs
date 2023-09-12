@@ -11,7 +11,7 @@ using Purse.Infrastructure.Data.Config;
 
 namespace Purse.Infrastructure.Data
 {
-    internal class PurseDbContext : DbContext
+    public class PurseDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<PurseM> Purses { get; set; }
@@ -40,7 +40,7 @@ namespace Purse.Infrastructure.Data
             public PurseDbContext CreateDbContext(string[] args)
             {
                 var optionsBuilder = new DbContextOptionsBuilder<PurseDbContext>();
-                optionsBuilder.UseSqlServer(@"Server=DESKTOP-8P7BMBK;Database=DemoDb;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-CMR9S4V;Database=DemoDb;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
                 return new PurseDbContext(optionsBuilder.Options);
 
 

@@ -11,6 +11,7 @@ namespace Purse.Domain.Entites
     public class PurseM
 
     {
+
         public int PurseId { get; set; }
         public float PurseBalance { get; set; }
         public PurseKind PurseKind { get; set; }

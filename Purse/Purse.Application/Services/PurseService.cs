@@ -9,7 +9,7 @@ using Purse.Infrastructure.Data;
 
 namespace Purse.Application.Services
 {
-    internal class PurseService : IPurseService
+    public class PurseService : IPurseService
     {
         private readonly PurseDbContext _dbContext;
 
