@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Purse.Domain\Purse.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

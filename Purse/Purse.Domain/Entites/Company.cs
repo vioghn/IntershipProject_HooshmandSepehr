@@ -16,9 +16,10 @@ namespace Purse.Domain.Entites
         public float CompanyRate  {get; set; } 
         public string CompinyNo { get; set;
         }
+        public IEnumerable<User> Users { get; set; }
 
 
-        
+
 
     }
 }

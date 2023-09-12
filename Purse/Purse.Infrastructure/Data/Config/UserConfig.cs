@@ -17,7 +17,7 @@ namespace Purse.Infrastructure.Data.Config
             builder.HasKey(x => x.UserId);
             builder.Property(x => x.UserName).HasMaxLength(50);
             builder.Property(x => x.UserRole).HasMaxLength(50);
-            builder.HasOne(e => e.Purse).WithOne(c => c.User).HasForeignKey<PurseM>(a => a.UserId);
+            
 
         }
 

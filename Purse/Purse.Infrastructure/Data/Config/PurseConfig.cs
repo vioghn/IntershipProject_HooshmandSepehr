@@ -17,8 +17,7 @@ namespace Purse.Infrastructure.Data.Config
             builder.ToTable("Purse");
             builder.HasKey(x => x.PurseId);
             builder.Property(x => x.PurseBalance).HasDefaultValue(0.0);
-            builder.HasOne(e => e.User).WithOne(c => c.Purse).HasForeignKey<User>(a => a.PurseId);
-
         }
+            
     }
 }

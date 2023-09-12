@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Purse.Domain.Entites;
-
 
 namespace Purse.Application.Contracts
 {
     internal interface IPurseService
     {
-        public string Deposit(float amount);
-        public string Withdraw(float amount);
-        public List<PurseM> GetPurses();
-        public float GetBalance(int PurseId);
-
-
-
-
+        string Deposit(int purseId, float amount);
+        string Withdraw(int purseId, float amount);
+        string Move(int sourcePurseId, int destinationPurseId, float amount);
+        List<PurseM> GetPurses();
+        float GetBalance(int purseId);
     }
 }
