@@ -30,8 +30,7 @@ namespace Purse.Infrastructure.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     UserPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserRole = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -52,8 +51,7 @@ namespace Purse.Infrastructure.Migrations
                 name: "Purse",
                 columns: table => new
                 {
-                    PurseId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PurseId = table.Column<int>(type: "int", nullable: false),
                     PurseBalance = table.Column<float>(type: "real", nullable: false, defaultValue: 0f),
                     PurseKind = table.Column<int>(type: "int", nullable: false),
                     IsBlocked = table.Column<bool>(type: "bit", nullable: false),
@@ -74,8 +72,7 @@ namespace Purse.Infrastructure.Migrations
                 name: "Transaction",
                 columns: table => new
                 {
-                    TransactionID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TransactionID = table.Column<int>(type: "int", nullable: false),
                     TransactionKind = table.Column<int>(type: "int", nullable: false),
                     TransactionStatus = table.Column<int>(type: "int", nullable: false),
                     TransactionTime = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -97,8 +94,7 @@ namespace Purse.Infrastructure.Migrations
                 name: "Voacher",
                 columns: table => new
                 {
-                    VoacherId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VoacherId = table.Column<int>(type: "int", nullable: false),
                     PurseSourceId = table.Column<int>(type: "int", nullable: false),
                     PurseDestinationID = table.Column<int>(type: "int", nullable: false),
                     VoacherTime = table.Column<DateTime>(type: "datetime2", nullable: false),

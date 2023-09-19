@@ -55,10 +55,7 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.PurseM", b =>
                 {
                     b.Property<int>("PurseId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PurseId"));
 
                     b.Property<bool>("IsBlocked")
                         .HasColumnType("bit");
@@ -84,10 +81,7 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.Transaction", b =>
                 {
                     b.Property<int>("TransactionID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionID"));
 
                     b.Property<int>("PurseId")
                         .HasColumnType("int");
@@ -116,10 +110,7 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.User", b =>
                 {
                     b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<int>("CompanyID")
                         .HasColumnType("int");
@@ -148,10 +139,7 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.Voacher", b =>
                 {
                     b.Property<int>("VoacherId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VoacherId"));
 
                     b.Property<int>("PurseDestinationID")
                         .HasColumnType("int");
