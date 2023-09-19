@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Purse.Domain.Entites
 
     public class Transaction
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int TransactionID { get; set; }
         public  Kind TransactionKind  { get; set; }
         public Status TransactionStatus { get; set; }

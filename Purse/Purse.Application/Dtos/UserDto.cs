@@ -12,6 +12,7 @@ namespace Purse.Application.Dtos
         public string UserName { get; set; }
         public string UserPhone { get; set; }
         public string UserRole { get; set; }
-        public int CompanyId { get; set; }
+        public int CompanyID { get; set; }
+        
     }
 }

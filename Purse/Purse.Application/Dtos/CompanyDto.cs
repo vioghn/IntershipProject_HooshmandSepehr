@@ -12,6 +12,6 @@ namespace Purse.Application.Dtos
         public string CompanyName { get; set; }
         public string CompanyLocation { get; set; }
         public float CompanyRate { get; set; }
-        public string CompanyNo { get; set; }
+        public string CompinyNo { get; set; }
     }
 }

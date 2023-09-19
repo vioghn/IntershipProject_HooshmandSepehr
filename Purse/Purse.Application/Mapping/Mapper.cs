@@ -46,5 +46,23 @@ namespace Purse.Application.Mapping
         }
     }
 }
+/*
+namespace Purse.Application.Mapping
+{
+    public class PurseMappingProfile : Profile
+    {
+        public PurseMappingProfile()
+        {
+            // For properties with null source values, skip the destination member
+            CreateMap<Company, CompanyDto>()
+                .ForMember(dest => dest.CompanyNo, opt => opt.MapFrom(src => src.CompinyNo != null ? src.CompinyNo : 0));
 
+            CreateMap<PurseM, PurseDto>();
+            CreateMap<Transaction, TransactionDto>();
+            CreateMap<User, UserDto>();
+            CreateMap<Voacher, VoacherDto>();
+        }
+    }
+}
 
+*/

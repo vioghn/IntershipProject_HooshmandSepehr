@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Purse.Domain.Entites
 {
     public class Voacher
     {
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int VoacherId { get; set; }
         public int PurseSourceId { get; set; }
         public int PurseDestinationID { get; set; }

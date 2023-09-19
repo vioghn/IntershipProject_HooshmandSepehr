@@ -12,7 +12,7 @@ namespace Purse.Domain.Entites
 
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Key] 
+        /*[Key] */
         public int CompanyId { get; set; }
         public string CompanyName { get; set; } 
         public string CompanyLocation { get; set; } 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Purse.Domain.Entites
     public class PurseM
 
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PurseId { get; set; }
         public float PurseBalance { get; set; }
         public PurseKind PurseKind { get; set; }
