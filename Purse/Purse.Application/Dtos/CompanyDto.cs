@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Application.Dtos
 {
-    internal class CompanyDto
+    public class CompanyDto
     {
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }

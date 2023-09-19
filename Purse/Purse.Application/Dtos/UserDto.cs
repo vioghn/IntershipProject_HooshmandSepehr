@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Application.Dtos
 {
-    internal class UserDto
+    public class UserDto
     {
         public int UserId { get; set; }
         public string UserName { get; set; }

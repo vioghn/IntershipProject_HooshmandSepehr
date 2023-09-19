@@ -2,6 +2,7 @@
 using Purse.Application.Services;
 using Purse.Application.Contracts;
 using Purse.Domain.Entites;
+using Purse.Application.Dtos;
 
 namespace Purse.Api.Controllers
 {
@@ -19,7 +20,7 @@ namespace Purse.Api.Controllers
 
         [HttpGet]
         [Route("GetPurses")]
-        public ActionResult<List<PurseM>> GetPurses()
+        public ActionResult<List<PurseDto>> GetPurses()
         {
                 var purses = purseService.GetPurses();
             return Ok(purses);
@@ -33,33 +34,33 @@ namespace Purse.Api.Controllers
         }
         [HttpPut]
         [Route("UpdateUser")]
-        public ActionResult<string> UpdateUser(User user)
+        public ActionResult<string> UpdateUser(UserDto userDto)
         {
-            var response = purseService.UpdateUser(user);
+            var response = purseService.UpdateUser(userDto);
             return Ok(response);
         }
 
         [HttpPost]
         [Route("AddUser")]
-        public ActionResult<string> AddUser(User user, int CompanyId)
+        public ActionResult<string> AddUser(UserDto userDto, int CompanyId)
         {
-            var response = purseService.CreateUser(user, CompanyId);
+            var response = purseService.CreateUser(userDto, CompanyId);
             return Ok(response);
         }
 
         [HttpPost]
         [Route("AddPurse")]
-        public ActionResult<string> AddPurse(PurseM purse, int UserId)
+        public ActionResult<string> AddPurse(PurseDto purseDto, int UserId)
         {
-            var response = purseService.CreatePurse(purse, UserId);
+            var response = purseService.CreatePurse(purseDto, UserId);
             return Ok(response);
         }
 
         [HttpPost]
         [Route("AddCompany")]
-        public ActionResult<string> AddCompany(Company company)
+        public ActionResult<string> AddCompany(CompanyDto companyDto)
         {
-            var response = purseService.CreateCompany(company);
+            var response = purseService.CreateCompany(companyDto);
             return Ok(response);
         }
 

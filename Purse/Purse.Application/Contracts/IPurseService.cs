@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Purse.Domain.Entites;
+using Purse.Application.Dtos;
 
 namespace Purse.Application.Contracts
 {
@@ -8,12 +9,12 @@ namespace Purse.Application.Contracts
         string Deposit(int purseId, float amount);
         string Withdraw(int purseId, float amount);
         string Move(int sourcePurseId, int destinationPurseId, float amount);
-        List<PurseM> GetPurses(); //Done
+        List<PurseDto> GetPurses(); //Done
         float GetBalance(int purseId); //Done
-        string UpdateUser(User user); //Done
-        string CreateCompany(Company Company); //Done
-        string CreateUser(User user, int CompanyId); //Done
-        string CreatePurse(PurseM purse, int UserId); //Done
+        string UpdateUser(UserDto user); //Done
+        string CreateCompany(CompanyDto Company); //Done
+        string CreateUser(UserDto user, int CompanyId); //Done
+        string CreatePurse(PurseDto purse, int UserId); //Done
 
 
 

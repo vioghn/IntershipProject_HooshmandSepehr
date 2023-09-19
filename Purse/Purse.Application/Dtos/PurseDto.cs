@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Application.Dtos
 {
-    internal class PurseDto
+    public class PurseDto
     {
         public int PurseId { get; set; }
         public float PurseBalance { get; set; }

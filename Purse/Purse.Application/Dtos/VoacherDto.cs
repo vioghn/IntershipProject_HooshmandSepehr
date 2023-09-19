@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Purse.Application.Dtos
 {
-    internal class VoucherDto
+    public class VoacherDto
     {
         public int VoacherId { get; set; }
         public int PurseSourceId { get; set; }

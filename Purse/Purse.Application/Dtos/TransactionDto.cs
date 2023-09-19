@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Purse.Application.Dtos
 {
-    internal class TransactionDto
+    public class TransactionDto
     {
+        public int TransactionId { get; set; }
+        public string TransactionKind { get; set; }
+        public string TransactionStatus { get; set; }
+        public DateTime TransactionTime { get; set; }
+        public float TransactionValue { get; set; }
+        public int PurseId { get; set; }
     }
 }
