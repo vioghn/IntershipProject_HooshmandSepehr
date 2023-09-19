@@ -12,8 +12,8 @@ using Purse.Infrastructure.Data;
 namespace Purse.Infrastructure.Migrations
 {
     [DbContext(typeof(PurseDbContext))]
-    [Migration("20230919120705_changes")]
-    partial class changes
+    [Migration("20230919124833_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -84,7 +84,10 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.Transaction", b =>
                 {
                     b.Property<int>("TransactionID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionID"));
 
                     b.Property<int>("PurseId")
                         .HasColumnType("int");

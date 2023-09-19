@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Purse.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class changes : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,8 @@ namespace Purse.Infrastructure.Migrations
                 name: "Transaction",
                 columns: table => new
                 {
-                    TransactionID = table.Column<int>(type: "int", nullable: false),
+                    TransactionID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     TransactionKind = table.Column<int>(type: "int", nullable: false),
                     TransactionStatus = table.Column<int>(type: "int", nullable: false),
                     TransactionTime = table.Column<DateTime>(type: "datetime2", nullable: false),

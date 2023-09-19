@@ -11,7 +11,8 @@ namespace Purse.Domain.Entites
 
     public class Transaction
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        
+/*[DatabaseGenerated(DatabaseGeneratedOption.None)]*/
         public int TransactionID { get; set; }
         public  Kind TransactionKind  { get; set; }
         public Status TransactionStatus { get; set; }

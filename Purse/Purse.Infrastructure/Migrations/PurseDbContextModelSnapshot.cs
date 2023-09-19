@@ -81,7 +81,10 @@ namespace Purse.Infrastructure.Migrations
             modelBuilder.Entity("Purse.Domain.Entites.Transaction", b =>
                 {
                     b.Property<int>("TransactionID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionID"));
 
                     b.Property<int>("PurseId")
                         .HasColumnType("int");

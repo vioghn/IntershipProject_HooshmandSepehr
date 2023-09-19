@@ -16,6 +16,7 @@ namespace Purse.Infrastructure.Data.Config
             builder.ToTable("Transaction");
             builder.HasKey(x => x.TransactionID);
             builder.Property(x => x.transactionValue).HasDefaultValue(0.0);
+            builder.Property(x => x.TransactionID).UseIdentityColumn();
         }
     }
 }
